@@ -1,20 +1,6 @@
 import styled from "styled-components";
 
-const InputField = styled.input`
-  height: 2em;
-  width: 100%;
-  border: 1px solid rgba(210, 210, 210, 0.3);
-  padding: 1em 0.25em;
-  margin: 0.6em 0;
-  border-radius: 4px;
-  font-size: 1em;
-  line-height: 1.15px;
-  &:focus,
-  :active {
-    outline: none;
-    border: 1px solid rgb(0, 135, 202);
-  }
-`;
+import InputField from "./InputField";
 
 const Wrapper = styled.div`
   color: white;
@@ -24,10 +10,6 @@ const Wrapper = styled.div`
   border: 1px solid rgba(210, 210, 210, 0.3);
   margin: auto;
   margin-top: 0.6em;
-`;
-
-const Form = styled.form`
-  display: block;
 `;
 
 const Header = styled.h2`
@@ -74,22 +56,16 @@ const SignUpForm = () => {
   return (
     <Wrapper>
       <Header>Sign Up</Header>
-      <Form>
-        <label style={{ display: "block" }} htmlFor='usernamefield'>
-          Username <InputField type='text' id='usernamefield' />
-        </label>
-        <label style={{ display: "block" }} htmlFor='emailfield'>
+      <form>
+        <InputField fieldId='usernamefield' text>
+          Username
+        </InputField>
+        <InputField fieldId='usernamefield' email>
           Email
-          <InputField type='email' id='usernamefield' />
-        </label>
-        <label style={{ display: "block" }} htmlFor='passwordfield'>
+        </InputField>
+        <InputField fieldId='usernamefield' password>
           Password
-          <InputField type='password' id='usernamefield' />
-        </label>
-        <label style={{ display: "block" }} htmlFor='passwordfield'>
-          Password
-          <InputField type='password' id='usernamefield' />
-        </label>
+        </InputField>
         <fieldset
           style={{
             margin: "0.6em 0",
@@ -102,7 +78,7 @@ const SignUpForm = () => {
             <label htmlFor=''>
               <span>
                 Agree to the <a href='_blank'>End User License Agreement</a> and
-                the <a  href='_blank'> Privacy Policy</a>.
+                the <a href='_blank'> Privacy Policy</a>.
               </span>
             </label>
           </div>
@@ -110,20 +86,20 @@ const SignUpForm = () => {
         <SubmitButton type='submit'>Create An Account</SubmitButton>
         <Or>
           <span>Or</span>
+          <a
+            style={{
+              display: "block",
+              color: "white",
+              textDecoration: "none",
+              marginTop: "1.9em",
+              textAlign: "center",
+            }}
+            href='_blank'
+          >
+            Sign In
+          </a>
         </Or>
-        <a
-          style={{
-            display: "block",
-            color: "white",
-            textDecoration: "none",
-            marginTop: "1.9em",
-            textAlign: "center",
-          }}
-          href='_blank'
-        >
-          Sign In
-        </a>
-      </Form>
+      </form>
     </Wrapper>
   );
 };

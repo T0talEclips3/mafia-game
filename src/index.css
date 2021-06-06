@@ -21,4 +21,6 @@ code {
 * {
   box-sizing: border-box;
 }
-
+.choosen{
+  background-color: red;
+}

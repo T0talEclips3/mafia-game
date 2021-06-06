@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import InputField from "./InputField";
 
 const FormWrapper = styled.div`
   color: white;
@@ -17,24 +19,6 @@ const FormWrapper = styled.div`
     a {
       float: right;
       color: white;
-    }
-    label {
-      display: block;
-    }
-    input {
-      height: 2em;
-      width: 100%;
-      border: 1px solid rgba(210, 210, 210, 0.3);
-      padding: 1em 0.25em;
-      margin: 0.6em 0;
-      border-radius: 4px;
-      font-size: 1em;
-      line-height: 1.15px;
-      &:focus,
-      :active {
-        outline: none;
-        border: 1px solid rgb(0, 135, 202);
-      }
     }
     button {
       margin-top: 0.6em;
@@ -71,7 +55,7 @@ const FormWrapper = styled.div`
       background: rgba(210, 210, 210, 0.3);
     }
     a {
-      display: block;
+      display: block;   
       color: white;
       text-decoration: none;
       margin-top: 1.9em;
@@ -85,19 +69,18 @@ const SignInForm = () => {
     <FormWrapper>
       <h2>Sign In</h2>
       <form>
-        <label htmlFor='usernamefield'>
-          Username <input type='text' id='usernamefield' />
-        </label>
-        <a href='_blank'>Forgot Password?</a>
-        <label htmlFor='passwordfield'>
+        <InputField fieldId='usernamefield' text>
+          Username
+        </InputField>
+        <Link to='/'>Forgot Password?</Link>
+        <InputField fieldId='passwordfield' password>
           Password
-          <input type='password' id='usernamefield' />
-        </label>
+        </InputField>
         <button type='submit'>Sign In</button>
       </form>
       <div>
         <span>Or</span>
-        <a href='_blank'>Sign Up</a>
+        <Link to='/signup'>Sign Up</Link>
       </div>
     </FormWrapper>
   );

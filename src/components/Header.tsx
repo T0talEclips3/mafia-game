@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Wrapper = styled.header`
@@ -18,7 +19,6 @@ const MenuList = styled.ul`
 `;
 
 const MenuListItem = styled.li`
-  padding: 7px;
   transition: background-color 0.25s ease-out;
   position: relative;
   :hover {
@@ -43,11 +43,12 @@ const MenuListItem = styled.li`
     transform: scaleX(1);
     transform-origin: bottom left;
   }
-`;
-
-const MenuListItemLink = styled.a`
-  text-decoration: none;
-  color: white;
+  a {
+    display: block;
+    padding: 7px;
+    text-decoration: none;
+    color: white;
+  }
 `;
 
 const Header = () => {
@@ -55,18 +56,18 @@ const Header = () => {
     <Wrapper>
       <MenuList>
         <MenuListItem>
-          <MenuListItemLink>Browse</MenuListItemLink>
+          <Link to='/browse'>Browse</Link>
         </MenuListItem>
         <MenuListItem>
-          <MenuListItemLink>Learn</MenuListItemLink>
+          <Link to='/learn'>Learn</Link>
         </MenuListItem>
       </MenuList>
       <MenuList>
         <MenuListItem>
-          <MenuListItemLink>Sign In</MenuListItemLink>
+          <Link to='/signin'>Sign In</Link>
         </MenuListItem>
         <MenuListItem>
-          <MenuListItemLink>Sign Up</MenuListItemLink>
+          <Link to='/signup'>Sign Up</Link>
         </MenuListItem>
       </MenuList>
     </Wrapper>
