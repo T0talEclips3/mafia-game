@@ -1,6 +1,6 @@
+import { FormProvider } from "../../../context/auth";
 import {
   Container,
-  FormProvider,
   Heading,
   InputField,
   OrBlock,
@@ -13,9 +13,9 @@ const SignInForm = () => {
     <Container>
       <Heading>Sign In</Heading>
       <FormProvider>
-        <InputField label='Username' fieldId='usernamefield' />
+        <InputField label='Username' fieldId='usernamefield' username />
         <Forget />
-        <InputField label='Password' fieldId='passwordfield' />
+        <InputField label='Password' fieldId='passwordfield' password />
         <SubmitButton>Sign In</SubmitButton>
       </FormProvider>
       <OrBlock to='Sign Up' />

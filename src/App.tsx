@@ -1,23 +1,25 @@
 import React from "react";
-import { Route } from "react-router";
-import Header from "./components/Header";
+import { Route, Switch } from "react-router";
+import Header from "./components/App/Header";
 import SignInForm from "./components/auth/SignIn";
 import SignUpForm from "./components/auth/SignUp";
-import GameBrowser from "./components/GameBrowser";
+import Browser from "./components/Browser";
 
 function App() {
   return (
     <>
       <Header />
-      <Route path='/signin'>
-        <SignInForm />
-      </Route>
-      <Route path='/signup'>
-        <SignUpForm />
-      </Route>
-      <Route path='/browse'>
-        <GameBrowser />
-      </Route>
+      <Switch>
+        <Route path='/signin'>
+          <SignInForm />
+        </Route>
+        <Route path='/signup'>
+          <SignUpForm />
+        </Route>
+        <Route path='/browse'>
+          <Browser />
+        </Route>
+      </Switch>
     </>
   );
 }

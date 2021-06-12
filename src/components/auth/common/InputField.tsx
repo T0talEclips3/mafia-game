@@ -5,7 +5,7 @@ import {
   CHANGE_NAME_ACTION,
   CHANGE_PASSWORD_ACTION,
   useFormContext,
-} from "./FormContext";
+} from "../../../context/auth";
 
 export interface IInputFieldProps {
   password?: true;

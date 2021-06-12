@@ -5,6 +5,4 @@ const StyledLabel = styled.label`
   padding: 0.25em 0.5em;
 `;
 
-export const CellLabel = () => {
-  return <StyledLabel htmlFor='qwe'>Server number three</StyledLabel>;
-};
+export default StyledLabel;

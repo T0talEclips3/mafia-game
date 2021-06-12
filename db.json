@@ -3,44 +3,44 @@
     {
       "id": 1,
       "name": "Mafia Game Server #1",
-      "Players": "10 / 12",
-      "HostedBy": "Host Name"
+      "population": "10 / 12",
+      "hostedBy": "Host Name"
     },
     {
       "id": 2,
       "name": "Mafia Game Server #2",
-      "Players": "9 / 12",
-      "HostedBy": "Host Name"
+      "population": "9 / 12",
+      "hostedBy": "Host Name"
     },
     {
       "id": 3,
       "name": "Mafia Game Server #3",
-      "Players": "7 / 12",
-      "HostedBy": "Host Name"
+      "population": "7 / 12",
+      "hostedBy": "Host Name"
     },
     {
       "id": 4,
       "name": "Mafia Game Server #4",
-      "Players": "1 / 12",
-      "HostedBy": "Host Name"
+      "population": "1 / 12",
+      "hostedBy": "Host Name"
     },
     {
       "id": 5,
       "name": "Mafia Game Server #5",
-      "Players": "6 / 12",
-      "HostedBy": "Host Name"
+      "population": "6 / 12",
+      "hostedBy": "Host Name"
     },
     {
       "id": 6,
       "name": "Mafia Game Server #6",
-      "Players": "7 / 12",
-      "HostedBy": "Host Name"
+      "population": "7 / 12",
+      "hostedBy": "Host Name"
     },
     {
       "id": 7,
       "name": "Mafia Game Server #7",
-      "Players": "4 / 12",
-      "HostedBy": "Host Name"
+      "population": "4 / 12",
+      "hostedBy": "Host Name"
     }
   ]
 }

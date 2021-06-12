@@ -27,7 +27,7 @@ const Container = styled.div`
 `;
 
 const StyledSpan = styled.span`
-  background-color: rgb(29, 31, 39);
+  background-color: black;
   width: 30px;
   position: absolute;
   z-index: 1;
@@ -39,7 +39,6 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   margin-top: 1.9em;
   text-align: center;
-  color: white;
 `;
 
 const OrBlock: React.FC<IOrBlockProps> = ({ to }) => {

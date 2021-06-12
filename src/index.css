@@ -1,7 +1,7 @@
 :root {
   --dark-fantasy: rgb(29, 31, 39);
   --royal-blue: rgb(0, 135, 202);
-  --shadow: rgba(210, 210, 210, 0.3);
+  --shadow: rgba(210, 210, 210, 0.2);
 }
 body {
   margin: 0;
@@ -20,7 +20,4 @@ code {
 
 * {
   box-sizing: border-box;
-}
-.choosen{
-  background-color: red;
 }
